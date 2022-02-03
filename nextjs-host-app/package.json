@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "preflutter:build": "yarn flutter:clean",
+    "flutter:build": "(cd ../flutter_authenticator_demo && flutter build web --base-href /flutter-authenticator/)",
+    "postflutter:build": "yarn flutter:copy",
+    "flutter:clean": "rm -rf public/flutter-authenticator",
+    "flutter:copy": "cp -r ../flutter_authenticator_demo/build/web public/flutter-authenticator",
+    "build": "next build && next export",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
